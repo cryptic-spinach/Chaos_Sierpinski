@@ -82,6 +82,6 @@ function dotFunction() {
       x = (x+x3)/2;
       y = (y+y3)/2;
     }
-    ellipse(x, y, 1.5);
+    ellipse(x, y, 2);
   }
 }
