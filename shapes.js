@@ -66,7 +66,7 @@ function vertices() {
 
 function dotFunction() {
   stroke(66, 232, 244);
-  for (var i = 0; i < 10000; i++) {
+  for (var i = 0; i < 100000; i++) {
     choose = Math.floor(Math.random() * 3);
     if (choose == 0) {
       x = (x+x1)/2;
