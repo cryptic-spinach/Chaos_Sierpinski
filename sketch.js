@@ -12,9 +12,15 @@ var choose = Math.floor(Math.random() * 3);
 var z = new Line(x, y, x1, y1, 255);
 var marks = [];
 var nextDot;
+var manual = true;
+var gui_controls;
+var gui;
+var toggle_button;
+var add_dot_button;
 
 function setup() {
   createCanvas(600, 550);
+  dom_init();
 }
 
 function draw() {
