@@ -13,10 +13,10 @@ function startDrawing() {
 function addInterval() {
   background(0);
   vertices();
-  timer = setInterval(dotFunction, 5);
+  timer = setInterval(dotFunction, 1);
 }
 
-function add100000() {
+function addAllAtOnce() {
   for (var i = 0; i < 100000; i++) {
     dotfunction();
   }
@@ -52,4 +52,9 @@ Controls = function() {
       add_dot_button = gui.add(gui_controls, 'addThatDot').name('Add Dot');
   	}
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+	background(0);
 }
