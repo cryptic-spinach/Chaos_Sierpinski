@@ -1,18 +1,25 @@
 function stopDrawing() {
   noLoop();
-  setTimeout(add100000, 10);
+  setTimeout(addInterval, 30);
 }
 
 function startDrawing() {
   marks = [];
   z.alpha = 0;
+  clearInterval(timer);
   loop();
 }
 
-function add100000() {
+function addInterval() {
   background(0);
   vertices();
-  dotFunction();
+  timer = setInterval(dotFunction, 5);
+}
+
+function add100000() {
+  for (var i = 0; i < 100000; i++) {
+    dotfunction();
+  }
 }
 
 function dom_init() {
@@ -21,7 +28,7 @@ function dom_init() {
   gui_controls = new Controls();
   gui = new dat.GUI();
 
-  toggle_button = gui.add(gui_controls, 'AutoManualToggle').name('100000 dots');
+  toggle_button = gui.add(gui_controls, 'AutoManualToggle').name('Switch to Auto Mode');
   add_dot_button = gui.add(gui_controls, 'addThatDot').name('Add Dot');
 }
 
@@ -41,7 +48,7 @@ Controls = function() {
       manual = true;
       startDrawing();
       gui.remove(toggle_button);
-      toggle_button = gui.add(gui_controls, 'AutoManualToggle').name('100000 dots');
+      toggle_button = gui.add(gui_controls, 'AutoManualToggle').name('Switch to Auto Mode');
       add_dot_button = gui.add(gui_controls, 'addThatDot').name('Add Dot');
   	}
   }

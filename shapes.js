@@ -66,7 +66,6 @@ function vertices() {
 
 function dotFunction() {
   stroke(66, 232, 244);
-  for (var i = 0; i < 100000; i++) {
     choose = Math.floor(Math.random() * 3);
     if (choose == 0) {
       x = (x+x1)/2;
@@ -83,5 +82,4 @@ function dotFunction() {
       y = (y+y3)/2;
     }
     ellipse(x, y, 2);
-  }
 }

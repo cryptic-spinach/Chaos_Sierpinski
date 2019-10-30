@@ -3,7 +3,7 @@ var previousY;
 var x = 300;
 var y = 100;
 var x1 = 300;
-var x2 = 100
+var x2 = 100;
 var x3 = 500;
 var y1 = 100;
 var y2 = 100 + 200*Math.sqrt(3);
@@ -17,6 +17,8 @@ var gui_controls;
 var gui;
 var toggle_button;
 var add_dot_button;
+var timer;
+var count;
 
 function setup() {
   createCanvas(600, 550);
