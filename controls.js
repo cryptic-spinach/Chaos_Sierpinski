@@ -12,7 +12,9 @@ function startDrawing() {
 
 function addInterval() {
   background(0);
-  vertices();
+  vert1.show();
+  vert2.show();
+  vert3.show();
   timer = setInterval(dotFunction, 1);
 }
 
@@ -23,8 +25,6 @@ function addAllAtOnce() {
 }
 
 function dom_init() {
-
-  // Implement GUI controls
   gui_controls = new Controls();
   gui = new dat.GUI();
 
@@ -57,4 +57,31 @@ Controls = function() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 	background(0);
+}
+
+function addDot() {
+    noStroke();
+    previousX = x;
+    previousY = y;
+    if (choose == 0) {
+      x = (x+x1)/2;
+      y = (y+y1)/2;
+    }
+
+    if (choose == 1) {
+      x = (x+x2)/2;
+      y = (y+y2)/2;
+    }
+
+    if (choose == 2) {
+      x = (x+x3)/2;
+      y = (y+y3)/2;
+    }
+    nextDot = new Dot(x, y);
+    marks.push(nextDot);
+    verts[choose].alpha = 255;
+    verts[choose].r = 20;
+    verts[choose].ring = true;
+    choose = Math.floor(Math.random() * 3);
+    z = new Line(x, y, previousX, previousY, 255);
 }

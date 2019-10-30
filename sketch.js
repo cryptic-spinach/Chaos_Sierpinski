@@ -19,7 +19,10 @@ var gui;
 var toggle_button;
 var add_dot_button;
 var timer;
-
+var vert1 = new Vertex(x1, y1);
+var vert2 = new Vertex(x2, y2);
+var vert3 = new Vertex(x3, y3);
+var verts = [vert1, vert2, vert3];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -29,7 +32,22 @@ function setup() {
 function draw() {
   background(0);
   translate(windowWidth/2, windowHeight/2);
-  vertices();
+
+  vert1.show();
+  vert2.show();
+  vert3.show();
+
+  if (vert1.ring == true) {
+    vert1.glow();
+  }
+
+  if (vert2.ring == true) {
+    vert2.glow();
+  }
+
+  if (vert3.ring == true) {
+    vert3.glow();
+  }
 
   for (var i = 0; i < marks.length; i++) {
     marks[i].display();
