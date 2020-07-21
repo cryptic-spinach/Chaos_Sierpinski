@@ -57,6 +57,9 @@ Controls = function() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 	background(0);
+  vert1.show();
+  vert2.show();
+  vert3.show();
 }
 
 function addDot() {
