@@ -1,6 +1,6 @@
 var previousX;
 var previousY;
-var n = 200;
+var n = 250;
 var x = 0;
 var y = -n*Math.sqrt(3)/2;
 var x1 = 0;

@@ -22,7 +22,7 @@ class Dot {
 
   display() {
     stroke(66, 232, 244);
-    ellipse(this.x, this.y, 2);
+    ellipse(this.x, this.y, 1);
   }
 
   displayLast() {
@@ -83,5 +83,5 @@ function dotFunction() {
       x = (x+x3)/2;
       y = (y+y3)/2;
     }
-    ellipse(x, y, 2);
+    ellipse(x, y, 1);
 }

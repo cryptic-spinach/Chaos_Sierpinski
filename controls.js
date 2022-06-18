@@ -27,6 +27,7 @@ function addAllAtOnce() {
 function dom_init() {
   gui_controls = new Controls();
   gui = new dat.GUI();
+  gui.width = 335;
 
   toggle_button = gui.add(gui_controls, 'AutoManualToggle').name('Switch to Auto Mode');
   add_dot_button = gui.add(gui_controls, 'addThatDot').name('Add Dot');
